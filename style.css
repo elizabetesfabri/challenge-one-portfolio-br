@@ -2,129 +2,288 @@
 /*Já deixaremos o básico de reset de estilos. Caso queira adicionar mais informações
 coloque nas sessões indicadas*/
 
-:root{
+:root {
     /*Insira a variavel das outras cores inspecionando o modelo do figma*/
     /*Se esforce para trabalhar com variáveis, é uma dica profissional valiosa*/
-   --cor-de-fundo: #F5F5F5;
-   --cor-de-link: #000;
+    --cor-de-fundo: #F5F5F5;
+    --cor-de-link: #000;
 }
 
 body {
     box-sizing: border-box;
-    background-color: var(--cor-de-fundo) ;
+    background-color: var(--cor-de-fundo);
     font-family: 'Raleway';
     margin: 0;
     padding: 0;
     line-height: 1;
 }
-ol, ul,li {
+
+ol,
+ul,
+li {
     list-style: none;
 }
-a{
+
+a {
     text-decoration: none;
     color: var(--cor-de-link);
 }
 
-/*Neste desafio, gostariamos que praticassem a metodologia BEM, caso seintam a vontade 
-de utiliza-la. 
-
-Mas o que é o BEM?
-
-BEM (Block, Element, Modifier) ​​é uma abordagem baseada em componentes para o desenvolvimento
-web. A ideia por trás disso é dividir a interface do usuário em blocos independentes.
-Isso torna o desenvolvimento de interface fácil e rápido, mesmo com uma interface
-de usuário complexa, e permite a reutilização de código existente sem copiar e colar.
-
-Link da documentação oficial!
-https://en.bem.info/methodology/quick-start/*/
-
-/*Sessão Menu*/
-
-section.menu{
-
+/* Centralizar e limitar o tamanho da página */
+.all {
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 20px;
+    /* Adicione padding para espaçamento nas laterais */
 }
 
-/*Sessão Title*/
+/* Estilos para o menu */
+@media only screen and (min-width: 768px) {
+    section.menu {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 0;
+        width: 100%;
+        max-width: 1440px;
+        margin: 0 auto;
+    }
 
-section.title{
+    header {
+        display: flex;
+        align-items: center;
+    }
 
+    .menu__title {
+        font-size: 16px;
+        margin-left: 15px;
+    }
+
+    nav {
+        display: flex;
+        align-items: center;
+    }
+
+    .menu__list {
+        display: flex;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .menu__list__item {
+        margin-right: 20px;
+    }
+
+    .menu__list__item a {
+        color: var(--cor-de-link);
+        text-decoration: none;
+    }
+
+    .menu__list__item a:hover {
+        text-decoration: underline;
+    }
+
+    .menu__list__item__contato {
+        display: none;
+    }
+
+    nav {
+        margin-left: auto;
+    }
+
+    section.title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 0;
+        width: 100%;
+        max-width: 1440px;
+        margin: 0 auto;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+
+    .title {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 368px;
+    }
+
+
+    .title__div  {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        flex-direction: row-reverse;
+        /* Inverte a ordem dos elementos */
+    }
+
+    .title__profile {
+        width: 400px;
+        height: 400px;    
+        margin-left: 20px;
+        border-radius: 20px;
+        box-shadow: 0px 0px 21px 0px rgba(250, 156, 255, 1);
+    }
+
+    .title__bio {
+        font-size: 52px;
+        margin-bottom: 10px;
+    }
+
+    .title__subsection {
+        font-size: 23px;
+        margin-bottom: 20px;
+    }
+
+    .title__network {
+        display: flex;
+        list-style-type: none;
+        padding: 0;
+    }
+
+    .title__network__item {
+        margin-right: 20px;
+        font-size: 16px;
+    }
+
+    .title__network__item a {
+        text-decoration: none;
+        color: var(--cor-de-link);
+        display: flex;
+        align-items: center;
+    }
+
+    .title__network__item a img {
+        margin-left: 5px;
+        border-radius: 20px;
+        box-shadow: 0px 0px 21px 0px rgba(250, 156, 255, 1);
+    }
+
+    section.about {
+        background-color: #EAF2FD;
+        /* Define a cor de fundo */
+        /* padding: 50px 20px; */
+    }
+
+    .about__container {
+        
+        /* Define o tamanho máximo do container */
+        margin: 0 auto;
+        /* Centraliza o container na tela */
+    }
+
+    .about__title {
+        font-size: 32px;
+        font-weight: 700;
+        /* Define o peso da fonte como 700 (negrito) */
+    }
+
+    .about__paragraph {
+        font-size: 16px;
+        font-weight: 400;
+        
+        /* Define o peso da fonte como 400 (normal) */
+        margin-bottom: 20px;
+        /* Adiciona espaço entre os parágrafos */
+    }
 }
 
-/*Sessão About*/
+/* Estilos para telas menores */
+@media only screen and (max-width: 768px) {
+    section.menu {
+        text-align: center;
+        padding: 10px 0;
+    }
 
-section.about{
+    .menu__title {
+        font-size: 18px;
+    }
 
-}
+    nav {
+        display: none;
+    }
 
-/*Sessão Hobbies*/
+    .menu__list__item__contato {
+        display: block;
+        margin-top: 10px;
+    }
+    /* <!-- Sessão de Header/Title/Hero --> */
+    .title {
+        height: auto;
+        flex-direction: column;
+        align-items: center;
+    }
 
-section.hobbies{
-    
-}
+    .title__div {
+        width: 100%;
+        /* Defina a largura total para ocupar toda a largura da tela */
+        margin-bottom: 20px;
+        /* Adicione espaço entre o title__profile e o title__container */
+    }
 
-/* Experiência Acadêmica*/
+    .title__profile {
+        margin-left: 0;
+        margin-right: 20px;
+        /* Adicione margem à direita para separar a imagem do texto */
+    }
 
-section.academic{
+    .title__network{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .title__container {
+        width: 100%;
+        padding: 20px;
+        /* Defina a largura total para ocupar toda a largura da tela */
+        text-align: center;
+    }
 
-}
+    .title__network__item a {
+        text-align: center;
+        padding: 20px;
+    }
 
-/* experiência*/
+    .title__network__item a img {
+        float: none;
+        /* Remover o alinhamento da imagem */
+        margin: 5px auto;
+        /* Centralizar a imagem */
+        display: block;
+        /* Para centralizar corretamente */
+    }
+    .about {
+        background-color: #EAF2FD;
+        /* Define a cor de fundo */
+        padding: 20px;
+    }
 
-section.experience{
+    .about__container {
+        max-width: 100%;
+        /* Define o tamanho máximo do container */
+        margin: 0 auto;
+        /* Centraliza o container na tela */
+    }
 
-}
+    .about__title {
+        font-size: 24px;
+        font-weight: 700;
+        /* Define o peso da fonte como 700 (negrito) */
+    }
 
-/*Contato*/
-
-section.formcontato{
-
-}
-
-/*footeer*/
-
-section.footer{
-   
-}
-
-/* Chegou a hora de se desafiar com a responsividade, 
-utilize como referência os breakpoints @media abaixo*/
-
-/*Tablet*/
-@media (min-width: 768px) {
-
-/* Menu */
-
-/*title*/
-
-/*Skills*/
-
-/*Hobbies*/
-
-/*Experiências acadêmicas*/
-
-/*Expeirência profissional*/
-
-}
-
-/*Mobile*/
-@media (min-width: 425px) {
-
-/*Menu*/
-
-/*Titulo*/
-
-/*Sessão sobre*/
-
-/*Skills*/
-
-/*Hobbies*/
- 
-/*Formação Acadêmica*/
-
-/*Experiência Profissional*/
-
- /*Contato*/
-
-/*Footer*/
-
+    .about__paragraph {
+        font-size: 16px;
+        font-weight: 400;
+        /* Define o peso da fonte como 400 (normal) */
+        margin-bottom: 10px;
+        /* Adiciona espaço entre os parágrafos */
+    }
 }
