@@ -31,13 +31,13 @@ a {
 
 /* Centralizar e limitar o tamanho da página */
 .all {
-    max-width: 1440px;
+    /* max-width: 1136px; */
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 0 20px;
-    /* Adicione padding para espaçamento nas laterais */
+
 }
 
 /* Estilos para o menu */
@@ -48,7 +48,7 @@ a {
         align-items: center;
         padding: 20px 0;
         width: 100%;
-        max-width: 1440px;
+        max-width: 1136px;
         margin: 0 auto;
     }
 
@@ -101,7 +101,7 @@ a {
         align-items: center;
         padding: 20px 0;
         width: 100%;
-        max-width: 1440px;
+        max-width: 1136px;
         margin: 0 auto;
         margin-top: 50px;
         margin-bottom: 50px;
@@ -167,33 +167,231 @@ a {
         box-shadow: 0px 0px 21px 0px rgba(250, 156, 255, 1);
     }
 
-    section.about {
-        background-color: #EAF2FD;
-        /* Define a cor de fundo */
-        /* padding: 50px 20px; */
+    .about
+    {
+        background: #eaf2fd;
+        padding: 82px;
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+        align-items: center;
+        justify-content: flex-start;
+        align-self: stretch;
+        flex-shrink: 0;
+        position: relative;
     }
-
+   
     .about__container {
         
-        /* Define o tamanho máximo do container */
+        max-width: 1136px;
         margin: 0 auto;
-        /* Centraliza o container na tela */
+        padding: 20px;
     }
 
     .about__title {
         font-size: 32px;
         font-weight: 700;
-        /* Define o peso da fonte como 700 (negrito) */
+        /* Define o tamanho e peso da fonte */
+        text-align: left;
     }
 
     .about__paragraph {
         font-size: 16px;
         font-weight: 400;
-        
-        /* Define o peso da fonte como 400 (normal) */
-        margin-bottom: 20px;
-        /* Adiciona espaço entre os parágrafos */
+        text-align: left;
+        /* max-width: 1136px; */
+        margin: 0 auto;
     }
+    /* SKILLS */
+    .skills,
+    .hobbies
+    {
+        padding: 50px 20px;
+        max-width: 1136px;
+        margin: 0 auto;
+    }
+
+    .skills__title,
+    .hobbies__title,
+    .academic__title
+    {
+        font-size: 32px;
+        text-align: center;
+    }
+
+    .skills__line,
+    .hobbies__line
+    {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        gap: 15px;
+        max-width: 1136px;
+        margin: 0 auto;
+    }
+
+    .skills__box,
+    .hobbies__box
+    {
+        width: 176px;
+        height: 176px;
+        background-color: #FFFFFF;
+        border-radius: 10px;
+        margin-bottom: 20px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        text-align: left;
+        position: relative;
+    }
+
+    .skills__img,
+    .hobbies__img
+    {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        margin: 10px;
+    }
+
+    .skills__img img
+    {
+        width: 24px;
+        height: 24px;
+        margin-right: 5px;
+        vertical-align: middle;
+    }
+    .hobbies__img span
+    {
+        width: 24px;
+        height: 24px;
+        margin-right: 5px;
+        vertical-align: middle;
+    }
+    .skills__name,
+    .hobbies__name
+    {
+        font-size: 16px;
+        color: #464646;
+        position: absolute;
+        bottom: 0;
+        left: 40px;
+        margin: 10px;
+    }
+
+    .academic {
+        background: #eaf2fd;
+        padding: 82px;
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+        align-items: center;
+        justify-content: flex-start;
+        align-self: stretch;
+        flex-shrink: 0;
+        position: relative;
+    }
+
+    .academic__courses {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+    
+    .experience__box {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+    
+    .experience__img {
+        width: 100px; /* Ajuste conforme necessário */
+        height: 100px; /* Ajuste conforme necessário */
+        margin-right: 20px;
+        border-radius: 10px;
+    }
+    
+    .experience__info {
+        flex: 1;
+    }
+    
+    .experience__title {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+    
+    .experience__text {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+    
+    .experience__description {
+        display: flex;
+        align-items: center;
+    }
+    
+    .experience__repo,
+    .experience__demo {
+        margin-right: 10px;
+    }
+    
+    .formcontato__contacto {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .formcontato--esquerda {
+        flex: 1;
+    }
+    
+    .formcontato__img {
+        width: 100%;
+        max-width: 300px; /* Ajuste conforme necessário */
+        height: auto;
+        border-radius: 10px;
+    }
+    
+    .formcontato__text {
+        flex: 2;
+        padding: 20px;
+    }
+    
+    .formcontato__title {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+    
+    .formcontato__subtext {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+    
+    .formcontato__form {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .formcontato__input,
+    .formcontato__textarea {
+        margin-bottom: 10px;
+        padding: 5px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+    }
+    
+    .formcontato__botao {
+        padding: 5px 10px;
+        border: none;
+        background-color: #007bff;
+        color: #fff;
+        cursor: pointer;
+    }
+    
+    .formcontato__botao:hover {
+        background-color: #0056b3;
+    }
+    
 }
 
 /* Estilos para telas menores */
